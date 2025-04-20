@@ -51,32 +51,35 @@ Backend: http://localhost:8000
 ```
 
 Tasks to Complete
-1. Backend Issues
+# 1. Backend Issues
 Location: backend/app/recommender.py
 
 Current issues:
 
-Simplistic similarity calculation in calculate_fit_similarity
-Basic measurement extraction logic
-Generic error handling
-Missing input validation
-Hardcoded default recommendations
+- Simplistic similarity calculation in calculate_fit_similarity
+- Basic measurement extraction logic
+- Generic error handling
+- Missing input validation
+- Hardcoded default recommendations
+
 Required improvements:
 
-Implement better similarity matching for measurements and fit issues
-Add proper measurement extraction and validation
-Add specific error handling
-Implement sister size recommendations
-2. Frontend Issues
+- Implement better similarity matching for measurements and fit issues
+- Add proper measurement extraction and validation
+- Add specific error handling
+- Implement sister size recommendations
+
+# 2. Frontend Issues
 Location: frontend/src/components/ChatInterface.js
 
-# Current issues:
+ Current issues:
 
 - Missing loading states
 - Basic error handling
 - Simple recommendation display
 - No input validation
-- Required improvements:
+
+Required improvements:
 
 - Add loading indicators
 - Enhance recommendation display

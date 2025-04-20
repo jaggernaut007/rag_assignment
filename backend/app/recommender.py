@@ -1,11 +1,13 @@
 import json
+import logging
 from typing import Dict, List
 
 class BraFittingRAG:
     def __init__(self):
         self.load_knowledge_base()
         # Bug: Incorrect similarity threshold
-        self.similarity_threshold = 0.9
+        ## Reduced threshold for testing 0.9 ->0.6
+        self.similarity_threshold = 0.6
 
     def load_knowledge_base(self):
         try:
@@ -13,6 +15,8 @@ class BraFittingRAG:
                 self.knowledge_base = json.load(f)
         except FileNotFoundError:
             # Bug: Poor error handling
+            ## Added logging for quite warning.
+            logging.warning("Knowledge base file 'app/data/bra_fitting_data.json' not found. Proceeding with an empty knowledge base.")
             self.knowledge_base = []
 
     def calculate_fit_similarity(self, query: str, context: Dict) -> float:
