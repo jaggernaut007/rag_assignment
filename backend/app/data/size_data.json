@@ -1,29 +1,29 @@
 [
     {
-        description: Customer with chest measurement 34 inches, waist 28 inches, athletic build, prefers fitted clothing,
-        size: Medium,
-        measurements: {
-            chest: 34,
-            waist: 28
+        "description": "Customer with chest measurement 34 inches, waist 28 inches, athletic build, prefers fitted clothing",
+        "size": "Medium",
+        "measurements": {
+            "chest": 34,
+            "waist": 28
         },
-        additional_context: Athletic build requires consideration of shoulder width
+        "additional_context": "Athletic build requires consideration of shoulder width"
     },
     {
-        description: Shopper with 38 inch chest circumference, 32 inch waist, regular build, comfortable fit preferred,
-        size: Large,
-        measurements: {
-            chest: 38,
-            waist: 32
+        "description": "Shopper with 38 inch chest circumference, 32 inch waist, regular build, comfortable fit preferred",
+        "size": "Large",
+        "measurements": {
+            "chest": 38,
+            "waist": 32
         },
-        additional_context: Regular build with preference for comfort
+        "additional_context": "Regular build with preference for comfort"
     },
     {
-        description: Petite customer, 30 inch chest, 24 inch waist, slim build, likes close-fitting garments,
-        size: Small,
-        measurements: {
-            chest: 30,
-            waist: 24
+        "description": "Petite customer, 30 inch chest, 24 inch waist, slim build, likes close-fitting garments",
+        "size": "Small",
+        "measurements": {
+            "chest": 30,
+            "waist": 24
         },
-        additional_context: Slim build with preference for fitted style
+        "additional_context": "Slim build with preference for fitted style"
     }
 ]
