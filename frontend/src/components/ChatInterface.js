@@ -70,6 +70,7 @@ const ChatInterface = () => {
         body: JSON.stringify({ text: input }),
       });
 
+      // Added JSON validation
       let data;
       try {
         data = await response.json();
@@ -78,7 +79,7 @@ const ChatInterface = () => {
         setError("Received invalid response from server.");
         return;
       }
-
+      // Added error handling for failed requests and prints in main screen chat.
       if (data.error) {
         setLoading(false);
         setMessages([
@@ -132,6 +133,9 @@ const ChatInterface = () => {
         className="messages"
         style={{ display: "flex", flexDirection: "column", gap: "16px" }}
       >
+        {/* Material UI for bot and user are different based on isUser property */}
+        {/* Errors are red and recommendations are green.*/}
+        
         {messages.map((msg, index) =>
           msg.isUser ? (
             <Box key={index} sx={{ alignSelf: "flex-end", maxWidth: "70%" }}>
@@ -196,6 +200,7 @@ const ChatInterface = () => {
                       {typeof msg.confidence === "number" && (
                         <Typography variant="body2" sx={{ mb: 1 }}>
                           <Chip
+                          // Converting 0.90 to 90%
                             label={`Confidence: ${Math.round(
                               msg.confidence * 100
                             )}%`}
@@ -225,6 +230,7 @@ const ChatInterface = () => {
         />
         <button type="submit">Get Recommendation</button>
       </form>
+      {/* Better loading indicator */}
       {loading && (
         <div
           style={{
